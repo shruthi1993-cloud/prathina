@@ -14,7 +14,10 @@ git commands
 =================
 
 git clone git@github.com:shruthi1993-cloud/prathina.git
+
 git add .
+
 git commit -m "added new"
+
 git push origin main
 
