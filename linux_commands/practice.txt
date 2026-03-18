@@ -1,0 +1,80 @@
+
+
+
+In Networking --> Any login to device(switch, router, linux machine(ubuntu, centos, rhel etc)) will have 2 interfaces 
+1. ssh Login (cli --> command line interface)
+To do ssh to any linux machine
+=============================
+Format: ssh username@<ip> then enter and give password
+ssh root@10.192.238.126
+default
+2. Web UI Login(https://<ip> --> in ui page will give username, password (like our laptop))
+Once you login with ssh, it goes to "root" directory by default
+
+
+Commands
+==========
+ls (list) --> list all files and directory(folder)
+ls -a --> list all files and directories including all hidden ( in linux all files starting with . are hidden)
+ls -l --> list in long format in alphabetic
+root@radius-server-play:~# ls -l
+total 36
+-rw-r--r--  1 root root 2046 Mar 21  2025 1
+drwxr-xr-x 11 root root 4096 Feb 27 07:04 f5os_skill_generator
+drwxr-xr-x  5 root root 4096 Mar 21  2025 radius-env
+-rw-r--r--  1 root root 2567 Mar 21  2025 radius_server.py
+drwxr-xr-x  5 root root 4096 Mar 21  2025 radius-venv
+drwxr-xr-x  3 root root 4096 Mar  9 14:28 shruthi
+drwx------  2 root root 4096 Sep  9  2024 snap
+drwxr-xr-x  2 root root 4096 Mar  9 14:30 training
+drwxr-xr-x  5 root root 4096 Feb 26 10:55 venv
+
+root@radius-server-play:~# ls -lh # Human-readable file sizes
+total 36K
+-rw-r--r--  1 root root 2.0K Mar 21  2025 1
+drwxr-xr-x 11 root root 4.0K Feb 27 07:04 f5os_skill_generator
+drwxr-xr-x  5 root root 4.0K Mar 21  2025 radius-env
+-rw-r--r--  1 root root 2.6K Mar 21  2025 radius_server.py
+drwxr-xr-x  5 root root 4.0K Mar 21  2025 radius-venv
+drwxr-xr-x  3 root root 4.0K Mar  9 14:28 shruthi
+drwx------  2 root root 4.0K Sep  9  2024 snap
+drwxr-xr-x  2 root root 4.0K Mar  9 14:30 training
+drwxr-xr-x  5 root root 4.0K Feb 26 10:55 venv
+root@radius-server-play:~# ls -lt (# Sort by modification time)
+total 36
+drwxr-xr-x  2 root root 4096 Mar  9 14:30 training
+drwxr-xr-x  3 root root 4096 Mar  9 14:28 shruthi
+drwxr-xr-x 11 root root 4096 Feb 27 07:04 f5os_skill_generator
+drwxr-xr-x  5 root root 4096 Feb 26 10:55 venv
+-rw-r--r--  1 root root 2567 Mar 21  2025 radius_server.py
+drwxr-xr-x  5 root root 4096 Mar 21  2025 radius-venv
+drwxr-xr-x  5 root root 4096 Mar 21  2025 radius-env
+-rw-r--r--  1 root root 2046 Mar 21  2025 1
+drwx------  2 root root 4096 Sep  9  2024 snap
+root@radius-server-play:~# ls -lrt. (# Sort by time, reverse order (oldest first))
+total 36
+drwx------  2 root root 4096 Sep  9  2024 snap
+-rw-r--r--  1 root root 2046 Mar 21  2025 1
+drwxr-xr-x  5 root root 4096 Mar 21  2025 radius-env
+drwxr-xr-x  5 root root 4096 Mar 21  2025 radius-venv
+-rw-r--r--  1 root root 2567 Mar 21  2025 radius_server.py
+drwxr-xr-x  5 root root 4096 Feb 26 10:55 venv
+drwxr-xr-x 11 root root 4096 Feb 27 07:04 f5os_skill_generator
+drwxr-xr-x  3 root root 4096 Mar  9 14:28 shruthi
+drwxr-xr-x  2 root root 4096 Mar  9 14:30 training
+
+
+directories
+===========
+mkdir shruthi (make directory)
+cd shruthi/ (change directory)
+pwd (present working directory)
+cd ..  ( go to previous directory --> 1 step)
+cd ../..  (go to previous directory --> 2 steps)
+cd shruthi/shruthi1/ ( go to next directories at a time)
+cd <tab> it will give all the directories
+cd s<tab> --> it will give all directories starting with s
+cd ~ --> it will give root directory
+
+
+touch a.txt. ( create empty file with name a.txt)
